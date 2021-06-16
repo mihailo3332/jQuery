@@ -12,7 +12,7 @@
 <center><h1>Naslov</h1></center>
 <center><button id="dugme1">Klikni</button></center>
 <br>		
-<center><button id="drugme2">Dugme 2</button></center>
+<center><button id="ajax">Dugme 2</button></center>
 
 
 </body>
@@ -28,7 +28,17 @@ $(document).ready(function(){
 		
 		
 	});
+        $('#ajax').click(function(){
+			$.get("lokacija/info.php", function(data){
+    				$('h1').after('<center>'+data+'</center>');
+  			});
+	});
+
+
+
 
 });
+
+
 
 </script>
